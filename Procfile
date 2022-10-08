@@ -1,1 +1,1 @@
-worker: python main.py, dis_weather.py
+worker: python dis_weather.py
