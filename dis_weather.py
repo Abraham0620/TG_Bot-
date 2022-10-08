@@ -15,7 +15,7 @@ async  def start_command(message: types.Message):
     await message.reply("Привет! Напиши мне название города.")
 
 
-@dp.message_handler()
+@dp.message_handler(content_types=["text"])
 async def get_weather(message: types.Message):
     code_to_smile = {
         "Clear": "Ясно \U00002600",
@@ -60,7 +60,7 @@ async def get_weather(message: types.Message):
     except:
         await message.reply("\U00002620 Проверьте название города \U00002620")
 
-    return
+
 
 
 if __name__ == '__main__':
